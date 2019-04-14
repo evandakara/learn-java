@@ -8,15 +8,17 @@ public class DoWhileRepeatedQuestionRunner {
 
 		Scanner scanner = new Scanner(System.in);
 		int number = -1;
-
+        boolean isFinish = false;
 		do {
 			if (number != -1) {
 				System.out.println("Cube is " + (number * number * number));
-			}
-			System.out.print("Enter a number: ");
-			number = scanner.nextInt();
-		} while (number >= 0);
-		System.out.print("Thank You! Have Fun!");
+				isFinish = true;
+			} else {
+                System.out.print("Enter a number: ");
+                number = scanner.nextInt();
+            }
+		} while (number >= 0 && isFinish == true);
+		System.out.print("Tha0nk You! Have Fun!");
 	}
 
 }

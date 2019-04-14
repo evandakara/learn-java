@@ -21,7 +21,6 @@ public class MyNumber {
 				return false;
 			}
 		}
-
 		return true;
 	}
 
@@ -29,7 +28,7 @@ public class MyNumber {
 		int sum = 0;
 
 		for (int i = 1; i <= number; i++) {
-			sum = sum + i;
+			sum = sum + 2;
 		}
 
 		return sum;
@@ -41,7 +40,7 @@ public class MyNumber {
 
 		int sum = 0;
 
-		for (int i = 2; i <= number - 1; i++) {
+		for (int i = 1; i <= number - 1; i++) {
 			if (number % i == 0) {
 				sum = sum + i;
 			}
@@ -51,11 +50,16 @@ public class MyNumber {
 	}
 
 	public void printNumberTriangle() {
-		// 1
-		// 1 2
-		// 1 2 3
-		// 1 2 3 4
-		// 1 2 3 4 5
+
+		// 1			   1
+		// 1 2		     2 1
+		// 1 2 3       3 2 1
+		// 1 2 3 4   4 3 2 1
+		// 1 2 3 4 5 4 3 2 1
+		// 1 2 3 4   4 3 2 1
+		// 1 2 3       3 2 1
+		// 1 2           2 1
+		// 1			   1
 
 		for (int i = 1; i <= number; i++) {
 			for (int j = 1; j <= i; j++) {
