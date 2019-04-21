@@ -13,9 +13,15 @@ public class Student {
 	public Student(String name, int... marks) {
 		this.name = name;
 
+		// model for 1 dengan tipe data penampung
 		for (int mark : marks) {
 			this.marks.add(mark);
 		}
+
+		// model for 2 (lama) dengan variable iterator i, conditional dan i++ / i--
+//		for (int i = 0; i < marks.length; i++) {
+//			this.marks.add(marks[i]);
+//		}
 	}
 
 	public int getNumberOfMarks() {
@@ -31,7 +37,8 @@ public class Student {
 	}
 
 	public int getMaximumMark() {
-		return Collections.max(marks);
+		int result = Collections.max(marks);
+		return result;
 	}
 
 	public int getMinimumMark() {
