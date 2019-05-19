@@ -1,15 +1,19 @@
 package com.in28minutes.oops.level2;
 
+gimport java.math.BigDecimal;
+
 public class Rectangle {
 
-	//state
+	//state / gblobal vafariable
 	private int length;
 	private int width;
+	private BigDecimal degree;
 	
-	//creation
-	public Rectangle(int length, int width) {
+	//creation/ cnaeosttrictor
+	public Rectangle(int length, int width, BigDecimal degree) {
 		this.length = length;
 		this.width = width;
+		this.degree = degree;
 	}
 
 
@@ -29,7 +33,15 @@ public class Rectangle {
 	public void setWidth(int width) {
 		this.width = width;
 	}
-		
+
+	public BigDecimal getDegree() {
+		return degree;
+	}
+
+	public void setDegree(BigDecimal degree) {
+		this.degree = degree;
+	}
+
 	public int area() {
 		return length * width;
 	}
@@ -39,7 +51,7 @@ public class Rectangle {
 	}
 	
 	public String toString() {
-		return String.format("length - %d width - %d area - %d perimeter - %d", 
-				length, width, area(), perimeter());
+		return String.format("length = %d width = %d  degree = %d area = %d perimeter = %d",
+				length, width, degree.intValue(), area(), perimeter());
 	}
 }
