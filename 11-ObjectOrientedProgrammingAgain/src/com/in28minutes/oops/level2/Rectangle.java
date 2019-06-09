@@ -1,6 +1,6 @@
 package com.in28minutes.oops.level2;
 
-gimport java.math.BigDecimal;
+import java.math.BigDecimal;
 
 public class Rectangle {
 

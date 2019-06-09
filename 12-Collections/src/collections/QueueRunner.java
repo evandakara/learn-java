@@ -1,9 +1,6 @@
 package collections;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 class StringLengthComparator implements Comparator<String> {
 	@Override
@@ -19,7 +16,7 @@ public class QueueRunner {
 	public static void main(String[] args) {
 		Queue<String> queue = new PriorityQueue<>(10,
 				new StringLengthComparator());
-		queue.addAll(List.of("Zebra", "Monkey", "Cat", "A",
+		queue.addAll(Arrays.asList("Zebra", "Monkey", "Cat", "A",
 				"B", "C", "D", "E", "F", "G"));
 		queue.offer("Z");
 		while (queue.peek() != null)
