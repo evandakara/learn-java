@@ -1,6 +1,6 @@
-package com.in28minutes.exceptionhandling;
+package com.in28minutes.exceptionhandIing;
 
-public class ExceptionHandlingRunner {
+public class                                                                                                                                ExceptionHandlingRunner {
 
 	public static void main(String[] args) {
 		method1();

@@ -12,18 +12,20 @@ public class FinallyRunner {
 			scanner = new Scanner(System.in);
 			int[] numbers = { 12, 3, 4, 5 };
 
-			int number = numbers[21];
+			int number = numbers[0];
+
+			System.out.println(" "+number);
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			System.out.println("Before Scanner Close");
-			if(scanner!=null) {
+			System.out.println("ndsihon mafa dswoerver dsefnafga dajssjkjisbuk");
+			if (scanner != null) {
 				scanner.close();
 			}
 		}
 		
-		System.out.println("Just before closing out main");
+		System.out.println("Just before closing out main");//fdsasdfdsasdfdsasdfdsasfddfdsadsfdsasdfdsasdfdfdsasdfdsasffdsfadfadsasdfdsasdfdsafsdfdasfdsfadsfafdasasdfdsfdsafdsasafsddfdsasdfdsfadsafdsfadsfdsasdfgdsfgadssdadsadsadsafadfadsdasfdsafsdsfdfddfsdaaasdfgsfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdsadsfdsfaDSFADSFADSFDFDASDFGDSADSFDASFDFADSDAFSDAFDSAFDSFADSFDASDFADFSFADSDFSADFFDASDFSAFDSADFDFSASDFSFDADFSADFSAFDSAFDSDFAFDASFDSAFDFDSAFDSFAFDSDFASDFADS ASA SA SA SDFASDFADS SDAFDSAFDSFADSFADSFASASDAFSASDFGDASFDFSDDDFSSSSFADAFSDASSADDSASDSDSASDDSADSDADSASDSASASFSFASFASFSFSASAFSSAAFDFDSASDFDSASDFDSASDFDSASFDSASDFDSAFDSSADFFFSAFDFFSDDFSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFDSAFSDFGADSFGADSFADSFADSFADSFSDAFSFDSADFSADFDAFFDASFDASDFSAFDSADFSASDFASDFGADSAGFDSFGADSGFADSGFADSFDSFDAFASDFSDFFDFSDSFFDSFSDAASASFDFSADFSADASDFSDAFASDFASDFASFFDSASDFDSFASDAFSDAFSDfdsasdfdsasdfdsasdfdsasfddfdsadsfdsasdfdsasdfdfdsasdfdsasffdsfadfadsasdfdsasdfdsafsdfdasfdsfadsfafdasasdfdsfdsafdsasafsddfdsasdfdsfadsafdsfadsfdsasdfgdsfgadssdadsadsadsafadfadsdasfdsafsdsfdfddfsdaaasdfgsfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdsadsfdsfaDSFADSFADSFDFDASDFGDSADSFDASFDFADSDAFSDAFDSAFDSFADSFDASDFADFSFADSDFSADFFDASDFSAFDSADFDFSASDFSFDADFSADFSAFDSAFDSDFAFDASFDSAFDFDSAFDSFAFDSDFASDFADSfdsasdfdsasdfdsasdfdsasfddfdsadsfdsasdfdsasdfdfdsasdfdsasffdsfadfadsasdfdsasdfdsafsdfdasfdsfadsfafdasasdfdsfdsafdsasafsddfdsasdfdsfadsafdsfadsfdsasdfgdsfgadssdadsadsadsafadfadsdasfdsafsdsfdfddfsdaaasdfgsfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdsadsfdsfaDSFADSFADSFDFDASDFGDSADSFDASFDFADSDAFSDAFDSAFDSFADSFDASDFADFSFADSDFSADFFDASDFSAFDSADFDFSASDFSFDADFSADFSAFDSAFDSDFAFDASFDSAFDFDSAFDSFAFDSDFASDFADSASDFAFSDfaSDFASDFS
 	}
 
 }

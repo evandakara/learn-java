@@ -3,7 +3,6 @@ package com.in28minutes.generics;
 import java.util.ArrayList;
 
 public class MyCustomList<T>{
-	
 	ArrayList<T> list = new ArrayList<>();
 	
 	public void addElement(T element) {

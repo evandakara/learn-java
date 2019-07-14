@@ -1,11 +1,12 @@
 package com.in28minutes.functionalprogramming;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class FPNumberRunner {
 
 	public static void main(String[] args) {
-		List<Integer> numbers = List.of(4,6,8,13,3,15);
+		List<Integer> numbers = Arrays.asList(4,6,8,13,3,15);
 		
 		//Exercise - Print squares of first 10 numbers!
 		//Clue - IntStream.range(1,10)
@@ -27,8 +28,7 @@ public class FPNumberRunner {
 	}
 
 	private static int fpSum(List<Integer> numbers) {
-		return numbers.stream()
-				.reduce(0, 
+		return numbers.stream().reduce(0,
 					(number1, number2) ->  number1 + number2);
 	}
 

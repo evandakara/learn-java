@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -9,8 +10,8 @@ public class MultipleCallableRunner {
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		ExecutorService executorService = Executors.newFixedThreadPool(3);
 		
-		List<CallableTask> tasks = List.of(new CallableTask("in28Minutes"), 
-				new CallableTask("Ranga"),  new CallableTask("Adam"));
+		List<CallableTask> tasks = Arrays.asList(new CallableTask("in28Minutes"),
+				new CallableTask("Ranga"), new CallableTask("Adam"));
 		
 		List<Future<String>> results = executorService.invokeAll(tasks);
 		
