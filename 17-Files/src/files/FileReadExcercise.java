@@ -6,15 +6,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
-public class FileReadRunner {
+public class FileReadExcercise {
     public static void main(String[] args) throws IOException {
-        Path pathFileToRead = Paths.get("./resources/data.txt");
-
+        Path pathFileToRead = Paths.get("D:\\Google Drive\\programming\\notes\\ambil.txt");
         List<String> lines = Files.readAllLines(pathFileToRead);
         System.out.println(lines);
-        Files.lines(pathFileToRead).map(String::toLowerCase).filter(str -> str.contains("a")).forEach(System.out::println);
-
+        Files.lines(pathFileToRead).map(String::toLowerCase).filter(str -> str.contains("lihat")).forEach(System.out::println);
     }
-
 }
-// STOPSHIP: 21/07/2019 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
