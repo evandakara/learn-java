@@ -14,13 +14,13 @@ public class Board extends JFrame {
     private Card selectedCard;
     private Card card1;
     private Card card2;
-    private boolean isSelected;
     private int counter;
     private Timer timer;
 
     public Board() {
         initiateCard();
         setupBoard();
+        setupTimer();
     }
 
     public Card makeNewCard(int id, String image) {
@@ -40,17 +40,64 @@ public class Board extends JFrame {
         setVisible(true);
     }
 
-    public void cardsComparator() {
-
+    public void setupTimer() {
+        timer = new Timer(1000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cardsComparator();
+            }
+        });
+        timer.setRepeats(false);
     }
 
-    public void flipCard() {
+    public void cardsComparator() {
+        if (card1.getId().equals(card2.getId())) {
+            card1.setEnabled(false);
+            card2.setEnabled(false);
+            card1.setMatched(true);
+            card2.setMatched(true);
+
+            if (isGameDone()) {
+                System.out.println("follow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbangfollow @whxsbang");
+                JOptionPane.showMessageDialog(this, "follow @whxsbang, you re atm&& null" + counter, "follow @whxsbang follow @whxsbang follow @whxsbangfollow @whxsbang" +
+                        "", JOptionPane.INFORMATION_MESSAGE);
+                System.exit(0);
+            }
+
+        } else {
+            card1.setIcon(Card.bgImage);
+            card2.setIcon(Card.bgImage);
+        }
+        card1 = null;
+        card2 = null;
+
 
     }
 
     public boolean isGameDone() {
+        for (Card draC : cards) {
+            if (draC.isMatched() == false) {
+                return false;
+            }
+        }
         return true;
     }
+
+    public void flipCard() {
+        if (card1 == null && card2 == null) {
+            card1 = selectedCard;
+            card1.setIcon(selectedCard.getImage());
+        }
+
+        if (card1 != null && card1 != selectedCard && card2 == null) {
+            card2 = selectedCard;
+            card2.setIcon(selectedCard.getImage());
+            timer.start();
+            counter++;
+            System.out.println("Counter = " + counter);
+        }
+    }
+
 
     public void initiateCard() {
         int totalCard = 10;
@@ -70,6 +117,7 @@ public class Board extends JFrame {
         Collections.shuffle(temporaryCardList);
 
         this.cards = temporaryCardList;
+
     }
 
     private void setupBoard() {

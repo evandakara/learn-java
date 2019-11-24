@@ -5,7 +5,7 @@ public class Card extends JButton {
 
     private Integer id;
     private Icon image;
-    private static final Icon bgImage = new ImageIcon("background.jpg");
+    public static final Icon bgImage = new ImageIcon("background.jpg");
     private boolean matched;
 
     // Buat Konstruktor Card Disini
@@ -14,13 +14,12 @@ public class Card extends JButton {
         super(bgImage);
         this.id = id;
         this.image = new ImageIcon(imageFileName);
-        Image rescaled = ((ImageIcon) this.image).getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
+        Image rescaled = ((ImageIcon) this.image).getImage().getScaledInstance(60, 60, Image.SCALE_SMOOTH);
         this.image = new ImageIcon(rescaled);
     }
 
     public Integer getId() {
         return id;
-
     }
 
     public void setId(Integer id) {
